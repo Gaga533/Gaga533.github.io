@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Glasgow Dining Guide</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div id="map"></div>
+
+<div class="panel">
+  <div class="header">
+    <div>
+      <h3>Glasgow Dining Guide</h3>
+      <div class="sub">Eat well in Glasgow — filter & explore</div>
+    </div>
+    <div class="btnCol">
+      <button id="locateBtn" class="btn" title="Locate me">Locate</button>
+      <button id="randomBtn" class="btn btnPrimary" title="Random pick from current filter">Random meal</button>
+    </div>
+  </div>
+
+  <label>Category</label>
+  <select id="typeFilter">
+    <option value="all">All</option>
+    <option value="restaurant">Restaurant</option>
+    <option value="pub">Pub</option>
+    <option value="cafe">Cafe</option>
+    <option value="fast_food">Fast Food</option>
+  </select>
+
+  <label>Search (name)</label>
+  <input id="textFilter" placeholder="e.g. vegan / noodle / Buchanan" />
+
+  <div class="row">
+    <label class="switch">
+      <input id="ccToggle" type="checkbox" />
+      <span class="slider"></span>
+    </label>
+    <div class="rowText">
+      Show City Centre (2km)
+      <div class="small">Approx. circle buffer</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="pill"><span id="countNow">0</span> results</div>
+    <div class="pill"><span id="countTotal">0</span> total</div>
+  </div>
+
+  <div class="resultsHeader">
+    <div class="resultsTitle">Results</div>
+    <div class="resultsMeta"><span id="showingNow">0</span> shown</div>
+  </div>
+  <div id="resultsList" class="resultsList"></div>
+
+  <div class="legend">
+    <div><span class="dot restaurant"></span>Restaurant</div>
+    <div><span class="dot pub"></span>Pub</div>
+    <div><span class="dot cafe"></span>Cafe</div>
+    <div><span class="dot fast_food"></span>Fast Food</div>
+  </div>
+
+  <div class="hint" id="hint">Hover a point to preview. Click for details.</div>
+</div>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js"></script>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
